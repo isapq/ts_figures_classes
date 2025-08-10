@@ -4,8 +4,9 @@
   "description": "TS figures classes task",
   "main": "src/figuresClasses.ts",
   "scripts": {
-    "init": "mate-scripts init",
     "start": "mate-scripts start",
+    "deploy": "echo 'Comando de deploy aqui'",
+    "init": "mate-scripts init",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
     "postinstall": "npm run update",

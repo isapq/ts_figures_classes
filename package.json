@@ -5,7 +5,7 @@
   "main": "src/figuresClasses.ts",
   "scripts": {
     "start": "mate-scripts start",
-    "deploy": "echo 'Comando de deploy aqui'",
+    "deploy": "git add . && git commit -m 'deploy automático' && git push origin develop",
     "init": "mate-scripts init",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",

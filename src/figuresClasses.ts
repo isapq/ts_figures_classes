@@ -22,7 +22,7 @@ export class Triangle implements Figure {
     c: number,
   ) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('Erro, lados zerados');
+      throw new Error('All side lengths must be positive numbers.');
     }
 
     if (a + b <= c || c + b <= a || a + c <= b) {
@@ -39,7 +39,7 @@ export class Triangle implements Figure {
     const s = (this.a + this.b + this.c) / 2;
     const area = Math.sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
 
-    return Math.round(area * 100) / 100;
+    return Math.floor(area * 100) / 100;
   }
 }
 
@@ -52,7 +52,7 @@ export class Circle implements Figure {
 
   constructor(color: 'red' | 'green' | 'blue', radius: number) {
     if (radius <= 0) {
-      throw new Error('Erro, valor do raio zerado ou negativo');
+      throw new Error('Radius must be a positive number.');
     }
     this.color = color;
     this.radius = radius;
@@ -61,7 +61,7 @@ export class Circle implements Figure {
   getArea(): number {
     const area = Math.PI * this.radius * this.radius;
 
-    return Math.round(area * 100) / 100;
+    return Math.floor(area * 100) / 100;
   }
 }
 
@@ -76,7 +76,7 @@ export class Rectangle implements Figure {
 
   constructor(color: 'red' | 'green' | 'blue', width: number, height: number) {
     if (width <= 0 || height <= 0) {
-      throw new Error('Erro, valores zerados ou negativos');
+      throw new Error('Width and height must be positive numbers.');
     }
     this.color = color;
     this.width = width;
@@ -86,7 +86,7 @@ export class Rectangle implements Figure {
   getArea(): number {
     const area = this.width * this.height;
 
-    return Math.round(area * 100) / 100;
+    return Math.floor(area * 100) / 100;
   }
 }
 
